@@ -18,6 +18,17 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
 
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+try:
+    nltk.download('punkt')
+    nltk.download('stopwords')
+    nltk.download('punkt_tab') # Added for compatibility with newer NLTK versions
+except:
+    print("NLTK data already downloaded or error in downloading.")
+
 # ============================================================
 # 1. Load the assigned CSV file
 # ============================================================
@@ -58,18 +69,33 @@ print(df[df['label'] == 1]['comment'].head(3))
 
 
 # ============================================================
-# 3. Clean the text
+# 3. Clean the text (Using NLTK as required)
 # ============================================================
 
-def clean_text(text):
-    text = text.lower()
-    text = re.sub(r'[^a-z\s]', ' ', text)
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
+# Load stopwords once to speed up processing
+stop_words = set(stopwords.words('english'))
 
+def clean_text(text):
+    # 1. Convert to lowercase
+    text = text.lower()
+    
+    # 2. Tokenize (Split into words using NLTK)
+    # This satisfies the requirement to use nltk classes/methods
+    tokens = word_tokenize(text)
+    
+    # 3. Remove punctuation and stopwords
+    # We keep only words that are alphabetic (no numbers/symbols) 
+    # and are NOT in the stop_words list
+    cleaned_tokens = [word for word in tokens if word.isalpha() and word not in stop_words]
+    
+    # 4. Join back into a string
+    # CountVectorizer expects strings, not lists
+    return ' '.join(cleaned_tokens)
+
+# Apply the function
 df['comment_clean'] = df['comment'].apply(clean_text)
 
-print("\n=== Cleaned text examples ===")
+print("\n=== Cleaned text examples (NLTK) ===")
 print(df[['comment', 'comment_clean']].head())
 
 
