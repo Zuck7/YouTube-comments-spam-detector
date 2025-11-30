@@ -1,12 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 30 11:24:32 2025
-
-@author: Franklyn
-"""
 
 # COMP 237 NLP Project
-# Group 2
+# Group 2a
 # Dataset used: Youtube02-KatyPerry.csv
 
 import re
