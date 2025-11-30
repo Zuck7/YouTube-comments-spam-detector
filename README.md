@@ -47,6 +47,7 @@ The project uses the **Youtube02-KatyPerry.csv** dataset containing:
   - MultinomialNB: Naive Bayes classifier
   - cross_val_score: Cross-validation
   - confusion_matrix, accuracy_score, classification_report: Evaluation metrics
+- **nltk**: Natural Language Toolkit for text processing
 - **re**: Regular expressions for text cleaning
 
 ## 📁 Project Structure
@@ -85,7 +86,7 @@ cd YouTube-comments-spam-detector
 Install the required Python packages using pip:
 
 ```bash
-pip install pandas numpy scikit-learn
+pip install pandas numpy scikit-learn nltk
 ```
 
 Or create a virtual environment (recommended):
@@ -101,7 +102,7 @@ source venv/bin/activate
 venv\Scripts\activate
 
 # Install packages
-pip install pandas numpy scikit-learn
+pip install pandas numpy scikit-learn nltk
 ```
 
 ## 🚀 How to Run
