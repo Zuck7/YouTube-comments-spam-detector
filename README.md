@@ -217,7 +217,11 @@ Example screenshots of the program output can be found in the `OutputScreenshots
 ## 👥 Authors
 
 **Group 2 - COMP 237 NLP Project**
-- Franklyn (Lead Developer)
+
+- Zuhrddin Sharofiddinov - Project Lead
+- Franklyn Okonkwo - Lead Developer
+- Aditya Shoor - Developer 
+- Wenhao Ma - Designer
 
 ## 📄 License
 
