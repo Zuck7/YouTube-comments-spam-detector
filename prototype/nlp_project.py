@@ -2,8 +2,6 @@
 # COMP 237 NLP Project
 # Group 2a
 # Dataset used: Youtube02-KatyPerry.csv
-
-import re
 import numpy as np
 import pandas as pd
 
