@@ -55,7 +55,7 @@ The project uses the **Youtube02-KatyPerry.csv** dataset containing:
 ```
 YouTube-comments-spam-detector/
 │
-├── Group2_Spam_detector_COMP237/
+├── prototype/
 │   ├── nlp_project.py              # Main Python script
 │   ├── Youtube02-KatyPerry.csv     # Dataset
 │   └── OutputScreenshots/          # Sample output screenshots
@@ -111,7 +111,7 @@ pip install pandas numpy scikit-learn nltk
 
 1. Navigate to the project directory:
 ```bash
-cd Group2_Spam_detector_COMP237
+cd prototype
 ```
 
 2. Run the script:
@@ -209,22 +209,13 @@ The model classifies these example comments:
 
 Example screenshots of the program output can be found in the `OutputScreenshots/` directory:
 
-![Output Screenshot 1](Group2_Spam_detector_COMP237/OutputScreenshots/Screenshot%202025-11-30%20134252.png)
+![Output Screenshot 1](prototype/OutputScreenshots/Screenshot%202025-11-30%20134252.png)
 
-![Output Screenshot 2](Group2_Spam_detector_COMP237/OutputScreenshots/Screenshot%202025-11-30%20134302.png)
+![Output Screenshot 2](prototype/OutputScreenshots/Screenshot%202025-11-30%20134302.png)
 
-![Output Screenshot 3](Group2_Spam_detector_COMP237/OutputScreenshots/Screenshot%202025-11-30%20134313.png)
+![Output Screenshot 3](prototype/OutputScreenshots/Screenshot%202025-11-30%20134313.png)
 
-## 👥 Authors
-
-**Group 2 - COMP 237 NLP Project**
-
-- Zuhrddin Sharofiddinov - Project Lead
-- Franklyn Okonkwo - Lead Developer
-- Aditya Shoor - Developer 
-- Wenhao Ma - Designer
-
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -256,7 +247,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Handle emojis and special characters more intelligently
 - Implement hyperparameter tuning
 - Add more sophisticated feature engineering
-
----
-
-**Note**: Make sure the CSV file is in the same directory as the Python script when running the program.
